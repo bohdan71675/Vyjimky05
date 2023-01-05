@@ -41,7 +41,7 @@ namespace Vyjimky05
                 catch (OverflowException)
                 {
                     string text = textBox1.Lines[i];
-                    if (text[0] == '-')
+                    if (text[0] < 0)
                     {
                         pole[i] = Int32.MinValue;
                     }
@@ -51,7 +51,7 @@ namespace Vyjimky05
                     }
                 }
             }
-
+            
             listBox1.Items.Clear();
             foreach (int x in pole)
             {
